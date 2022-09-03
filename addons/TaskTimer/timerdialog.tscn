@@ -1,0 +1,96 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="WindowDialog"]
+visible = true
+margin_right = 370.0
+margin_bottom = 196.0
+popup_exclusive = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = 15.0
+margin_right = -15.0
+margin_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_constants/separation = 15
+
+[node name="b_stopwatch" type="Button" parent="VBoxContainer"]
+margin_right = 340.0
+margin_bottom = 20.0
+text = "Stopwatch"
+
+[node name="deadline_header" type="Label" parent="VBoxContainer"]
+margin_top = 35.0
+margin_right = 340.0
+margin_bottom = 49.0
+text = "Deadline Settings"
+align = 1
+valign = 1
+
+[node name="date" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 64.0
+margin_right = 340.0
+margin_bottom = 84.0
+alignment = 1
+
+[node name="d_month" type="OptionButton" parent="VBoxContainer/date"]
+margin_left = 46.0
+margin_right = 186.0
+margin_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 140, 0 )
+
+[node name="t_day" type="TextEdit" parent="VBoxContainer/date"]
+margin_left = 190.0
+margin_right = 230.0
+margin_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 40, 0 )
+text = "03"
+
+[node name="t_year" type="TextEdit" parent="VBoxContainer/date"]
+margin_left = 234.0
+margin_right = 294.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 60, 0 )
+text = "2022"
+
+[node name="time" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 99.0
+margin_right = 340.0
+margin_bottom = 119.0
+alignment = 1
+
+[node name="t_hour" type="TextEdit" parent="VBoxContainer/time"]
+margin_left = 114.0
+margin_right = 154.0
+margin_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 40, 20 )
+text = "12"
+
+[node name="Label" type="Label" parent="VBoxContainer/time"]
+margin_left = 158.0
+margin_top = 3.0
+margin_right = 162.0
+margin_bottom = 17.0
+text = ":"
+
+[node name="t_minute" type="TextEdit" parent="VBoxContainer/time"]
+margin_left = 166.0
+margin_right = 226.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 60, 20 )
+text = "45"
+
+[node name="b_deadline" type="Button" parent="VBoxContainer"]
+margin_top = 134.0
+margin_right = 340.0
+margin_bottom = 154.0
+text = "Start Deadline"
